@@ -1,1 +1,29 @@
 /*  your css code here. If applicable */
+#grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 120px;   /* FIX: equal height rows */
+  gap: 5px;
+}
+
+#grid div {
+  background: green;
+  color: white;
+  font-size: 28px;
+  padding: 20px;
+}
+
+/* Box 1 full width */
+#grid div:nth-child(1) {
+  grid-column: 1 / 4;
+}
+
+/* Box 2 left long column */
+#grid div:nth-child(2) {
+  grid-row: span 4;
+}
+
+/* Box 10 bottom wide */
+#grid div:nth-child(10) {
+  grid-column: 2 / 4;
+}

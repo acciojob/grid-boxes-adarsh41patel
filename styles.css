@@ -1,40 +1,36 @@
-#grid {
-  width: 970px;          /* Cypress expected width */
+body#grid {
+  width: 970px;      /* EXACT width so columns become 242.5px */
+  margin: 0 auto;    /* center body */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 124px;
   grid-gap: 10px 10px;
-  margin: 0 auto;
 }
 
-#grid div {
+body#grid > div {
   background: green;
   color: white;
   padding: 20px;
   font-size: 24px;
 }
 
-/* Box 1 */
-#grid div:nth-child(1) {
+/* Required spans */
+body#grid > div:nth-child(1) {
   grid-column: span 4;
 }
 
-/* Box 2 */
-#grid div:nth-child(2) {
+body#grid > div:nth-child(2) {
   grid-row: span 4;
 }
 
-/* Box 4 */
-#grid div:nth-child(4) {
+body#grid > div:nth-child(4) {
   grid-column: span 2;
 }
 
-/* Box 5 */
-#grid div:nth-child(5) {
+body#grid > div:nth-child(5) {
   grid-column: span 2;
 }
 
-/* Box 10 */
-#grid div:nth-child(10) {
+body#grid > div:nth-child(10) {
   grid-column: span 3;
 }
